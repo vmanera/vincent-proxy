@@ -13,17 +13,3 @@ function FindProxyForURL(url, host) {
   
   return "DIRECT";
 }
-
-
-function FindProxyForURL(url, host) {
-  if (
-    shExpMatch(
-      host,
-      "(*.sitecore.*.hbf.com.au|*.api.hbf.com.au|*.execute-api.*.amazonaws.com|apic*.hbf.com.au|*.dev.hbf.com.au)"
-    )
-  ) {
-    return "PROXY proxy.aws.hbf.com.au:8080";
-  } else {
-    return "DIRECT";
-  }
-}
