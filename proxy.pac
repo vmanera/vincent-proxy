@@ -22,7 +22,8 @@ function FindProxyForURL(url, host) {
     shExpMatch(host, "my.hbf.com.au") ||
     shExpMatch(host, "web.hbf.com.au") ||
     shExpMatch(host, "*.sitecore-staging.aws.hbf.com.au/") ||
-    shExpMatch(host, "*.sitecore-prod.aws.hbf.com.au/")
+    shExpMatch(host, "*.sitecore-prod.aws.hbf.com.au/") ||
+    shExpMatch(host, "*.nonprod.aws.hbf.com.au")
   ) {
     return "PROXY proxy.aws.hbf.com.au:8080";
   }
